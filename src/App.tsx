@@ -1149,12 +1149,51 @@ export function App() {
                       <span>Hablar por WhatsApp</span>
                     </a>
                   </div>
+
+                  <div className="pt-2 text-center">
+                    <p className="text-xs text-gray-600">
+                      ¿Prefieres completar el formulario en Google?{' '}
+                      <a 
+                        href="https://docs.google.com/forms/d/e/1FAIpQLSfjNjhnHqegmfKT6q6I52OzjNaqeT47Ar6HAk1OO04PTbY41g/viewform?pli=1"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-purple-700 hover:text-pink-600 font-bold underline inline-flex items-center gap-1"
+                      >
+                        <span>Abrir formulario de Consulta Gratuita</span>
+                        <ExternalLink className="w-3 h-3" />
+                      </a>
+                    </p>
+                  </div>
                 </form>
               )}
             </div>
 
             {/* Información de Contacto */}
             <div className="lg:col-span-5 flex flex-col justify-between space-y-6">
+              
+              {/* Card de Consulta Gratuita en Google Form */}
+              <div className="bg-gradient-to-br from-purple-50 via-pink-50/60 to-white rounded-3xl p-7 border border-purple-200 shadow-md card-hover">
+                <div className="flex items-center gap-2 text-xs font-bold text-pink-700 uppercase tracking-wider mb-2">
+                  <Sparkles className="w-4 h-4" />
+                  <span>Sin Costo</span>
+                </div>
+                <h3 className="text-xl font-extrabold text-gray-900 mb-2">
+                  Agenda una Consulta Gratuita
+                </h3>
+                <p className="text-xs sm:text-sm text-gray-700 leading-relaxed mb-5 font-normal">
+                  Evaluaremos tu emprendimiento o marca personal sin costo. Completa nuestro formulario oficial de Google y te contactaremos.
+                </p>
+                <a
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSfjNjhnHqegmfKT6q6I52OzjNaqeT47Ar6HAk1OO04PTbY41g/viewform?pli=1"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full button-gradient bg-gradient-to-r from-purple-700 via-pink-600 to-rose-600 text-white font-bold py-3.5 px-6 rounded-xl shadow-md hover:shadow-xl transition-all flex items-center justify-center gap-2 text-xs sm:text-sm uppercase tracking-wider text-center"
+                >
+                  <span>Solicitar Consulta Gratuita</span>
+                  <ExternalLink className="w-4 h-4" />
+                </a>
+              </div>
+
               <div className="bg-white rounded-3xl p-8 shadow-xl shadow-purple-500/10 border border-purple-100 hover:shadow-2xl transition-all card-hover">
                 <h3 className="text-xl font-extrabold text-gray-900 mb-6">
                   Información de Contacto
