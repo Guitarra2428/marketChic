@@ -213,16 +213,16 @@ export function App() {
       title: "Catalonia Hotels & Resorts",
       category: "Voz en off y contenido audiovisual",
       description: "Desarrollo de piezas de contenido orientadas a comunicación digital, experiencia de marca y locución comercial.",
-      image: "/portfolio/image1.png",
+      image: "/portfolio/portfolio_catalonia_hotels.jpg",
       handle: "@cataloniahotels",
       tag: "Audiovisual & Branding"
     },
     {
       id: 2,
-      title: "Catalonia Hotels",
+      title: "Catalonia Hotels (5K Run for Love)",
       category: "Creación de contenido y modelo",
       description: "Conceptualización, producción y desarrollo de contenido audiovisual dinámico y modelaje para redes sociales.",
-      image: "/portfolio/image2.png",
+      image: "/portfolio/portfolio_catalonia_5k.jpg",
       handle: "@5kcataloniahotels",
       tag: "Social Media & Video"
     },
@@ -231,7 +231,7 @@ export function App() {
       title: "Eduard Espíritu Santo",
       category: "Guiones y planificación de contenido",
       description: "Planificación estratégica de piezas audiovisuales y desarrollo de guiones adaptados a objetivos de comunicación y eventos.",
-      image: "/portfolio/image3.png",
+      image: "/portfolio/portfolio_eduard_espiritusanto.jpg",
       handle: "@eduardespiritusanto",
       tag: "Planificación & Guiones"
     },
@@ -240,7 +240,7 @@ export function App() {
       title: "Dra. Ávila Dermaclinic",
       category: "Gestión de redes sociales",
       description: "Creación, diseño y adaptación de contenido estético y dermatológico para fortalecer la presencia digital de la clínica.",
-      image: "/portfolio/image4.png",
+      image: "/portfolio/portfolio_dra_avila.jpg",
       handle: "@dra.aviladermaclinic",
       tag: "Salud & Estética"
     },
@@ -249,7 +249,7 @@ export function App() {
       title: "Prestige Services & Car Rentals",
       category: "Contenido para redes sociales",
       description: "Desarrollo de piezas comerciales y contenido visual de alto impacto para servicios de transporte y renta de vehículos.",
-      image: "/portfolio/image5.png",
+      image: "/portfolio/portfolio_prestige_services.jpg",
       handle: "@prestigeservices_dr",
       tag: "Transporte & Renta"
     },
@@ -258,7 +258,7 @@ export function App() {
       title: "Glow Too Salon",
       category: "Estrategia visual & Redes sociales",
       description: "Desarrollo de contenido audiovisual fresco y dinámico destacando productos y tratamientos de belleza.",
-      image: "/portfolio/glow_too_salon.jpg",
+      image: "/portfolio/portfolio_glow_too_salon.jpg",
       handle: "@glowtoosalon",
       tag: "Belleza & Estilo"
     },
@@ -267,7 +267,7 @@ export function App() {
       title: "La Pharmacie RD",
       category: "Contenido digital & Publicaciones",
       description: "Diseño y comunicación de productos y servicios mediante publicaciones adaptadas a redes sociales (Altos de Chavón).",
-      image: "/portfolio/image6.png",
+      image: "/portfolio/portfolio_la_pharmacie.jpg",
       handle: "@lapharmacie_rd",
       tag: "Farmacia & Retail"
     },
@@ -276,7 +276,7 @@ export function App() {
       title: "Movimiento MICA",
       category: "Planificación y redes sociales",
       description: "Estrategia de comunicación y contenido comunitario para eventos, dinámicas y presencia digital.",
-      image: "/portfolio/movimiento_mica.jpg",
+      image: "/portfolio/portfolio_movimiento_mica.jpg",
       handle: "@mov_mica",
       tag: "Comunidad & Eventos"
     }
