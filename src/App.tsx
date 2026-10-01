@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { 
-  Sparkles, 
   TrendingUp, 
   Share2, 
   MessageSquare, 
@@ -146,10 +145,8 @@ export function App() {
 
   const handlePackageSelect = (packageName: string) => {
     setFormData(prev => ({ ...prev, servicio: `Paquete: ${packageName}` }));
-    const contactSection = document.getElementById('contacto');
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: 'smooth' });
-    }
+    const whatsappLink = `https://wa.me/18294401628?text=Hola%20MarketChic,%20me%20gustar%C3%ADa%20solicitar%20informaci%C3%B3n%20sobre%20el%20paquete%20*${encodeURIComponent(packageName)}*.`;
+    window.open(whatsappLink, '_blank');
   };
 
   const navLinks = [
@@ -526,7 +523,7 @@ export function App() {
 
               <div className="p-6 rounded-2xl bg-gradient-to-r from-pink-500/10 via-purple-500/10 to-emerald-500/10 border border-pink-200 text-center">
                 <p className="text-purple-950 font-bold text-lg sm:text-xl">
-                  ✨ Porque no creemos en soluciones genéricas: creemos en estrategias construidas a partir de la realidad de cada negocio.
+                  💡 Porque no creemos en soluciones genéricas: creemos en estrategias construidas a partir de la realidad de cada negocio.
                 </p>
               </div>
             </div>
@@ -718,13 +715,19 @@ export function App() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
             {servicios.map((s, index) => {
               const Icon = s.icon;
+              const colorClasses = s.color === 'pink' 
+                ? 'bg-pink-50 text-pink-700' 
+                : s.color === 'emerald' 
+                  ? 'bg-emerald-50 text-emerald-700' 
+                  : 'bg-purple-50 text-purple-700';
+
               return (
                 <div 
                   key={index}
                   className="service-card card-hover bg-white rounded-3xl p-8 relative group border border-purple-100 shadow-md hover:shadow-xl transition-all flex flex-col justify-between"
                 >
-                  <div>
-                    <div className={`w-14 h-14 rounded-2xl bg-${s.color}-50 flex items-center justify-center mb-6 text-${s.color}-700 group-hover:scale-110 transition-transform`}>
+                  <div className="relative z-10">
+                    <div className={`w-14 h-14 rounded-2xl ${colorClasses} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
                       <Icon className="w-7 h-7" />
                     </div>
                     <h3 className="text-xl font-bold mb-3 text-gray-900 group-hover:text-purple-700 transition-colors">
@@ -736,13 +739,16 @@ export function App() {
                   </div>
 
                   <a
-                    href={`https://wa.me/18294401628?text=Hola%20MarketChic,%20me%20interesa%20el%20servicio%20de%20${encodeURIComponent(s.title)}.`}
+                    href={`https://wa.me/18294401628?text=Hola%20MarketChic,%20me%20gustar%C3%ADa%20solicitar%20informaci%C3%B3n%20sobre%20el%20servicio%20de%20*${encodeURIComponent(s.title)}*.`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-extrabold text-purple-700 hover:text-pink-600 transition-colors pt-4 border-t border-gray-100"
+                    className="relative z-10 inline-flex items-center justify-between text-xs sm:text-sm font-extrabold text-purple-700 hover:text-emerald-600 transition-all pt-4 border-t border-gray-100 group/link cursor-pointer"
                   >
-                    <span>Solicitar información</span>
-                    <ArrowRight className="w-4 h-4" />
+                    <span className="flex items-center gap-2">
+                      <MessageSquare className="w-4 h-4 text-emerald-600 group-hover/link:scale-110 transition-transform" />
+                      <span>Solicitar información</span>
+                    </span>
+                    <ArrowRight className="w-4 h-4 text-purple-400 group-hover/link:text-emerald-600 group-hover/link:translate-x-1 transition-all" />
                   </a>
                 </div>
               );
@@ -993,7 +999,7 @@ export function App() {
               rel="noopener noreferrer"
               className="bg-white text-purple-950 hover:bg-purple-50 font-extrabold px-8 py-4 rounded-full shadow-2xl inline-flex items-center gap-2 text-sm uppercase tracking-wider transition-all transform hover:scale-105"
             >
-              <Sparkles className="w-4 h-4 text-pink-600" />
+              <Lightbulb className="w-4 h-4 text-pink-600" />
               <span>Solicitar una propuesta personalizada</span>
             </a>
           </div>
@@ -1174,7 +1180,7 @@ export function App() {
               {/* Card de Consulta Gratuita en Google Form */}
               <div className="bg-gradient-to-br from-purple-50 via-pink-50/60 to-white rounded-3xl p-7 border border-purple-200 shadow-md card-hover">
                 <div className="flex items-center gap-2 text-xs font-bold text-pink-700 uppercase tracking-wider mb-2">
-                  <Sparkles className="w-4 h-4" />
+                  <Lightbulb className="w-4 h-4 text-pink-600" />
                   <span>Sin Costo</span>
                 </div>
                 <h3 className="text-xl font-extrabold text-gray-900 mb-2">
@@ -1243,7 +1249,7 @@ export function App() {
 
               {/* Frase destacada */}
               <div className="bg-gradient-to-r from-purple-900 to-pink-900 text-white p-7 rounded-3xl shadow-xl card-hover border-l-4 border-emerald-400">
-                <Sparkles className="w-6 h-6 text-emerald-300 mb-2" />
+                <Lightbulb className="w-6 h-6 text-emerald-300 mb-2" />
                 <p className="font-bold text-base sm:text-lg leading-snug text-white">
                   “Tu marca no necesita improvisar más. Necesita claridad, estrategia y dirección.”
                 </p>
